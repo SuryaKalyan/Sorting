@@ -12,22 +12,22 @@ namespace BubbleSort
         {
             int[] a = { 20, 55, 99, 78, 104, 72, 7 };
             int temp;
-            for (int j=1;j<a.Length-1;j++)
+            for (int j=1;j<a.Length;j++)
             {
                 for(int i=0; i<a.Length-1;i++)
                 {
                     if (a[i] > a[i+1])
                     {
                         temp= a[i];
-                        a[i + 1] = a[i];
-                        temp = a[i + 1];
+                        a[i] = a[i+1];
+                        a[i + 1]= temp;
                     }
                 }
             }
             System.Console.Write("The sorted array is :");
             foreach (int aa in a) 
              System.Console.WriteLine(aa + "  ");
-            System.Console.Reada();
+            System.Console.Read();
         }
     }
 }
